@@ -94,14 +94,14 @@ PORT = 1433
 TDS_Version = 8.0
 ```
 
-1) Update macros for the monitored host under "Configuration -> Hosts -> <host> -> Macros":
+1) Update macros for the monitored host under "Configuration -> Hosts -> hostname -> Macros":
 ```
 {$MSSQL_PASSWORD} - <your generated pass>
 {$MSSQL_USER}	  - zbx-maint
 {$ODBC}		  - srv01-mssql
 ```
 
-!Host Macros](https://github.com/sfuerte/zbx-mssql/blob/master/images/zbx_mssql-macros_config.png)
+![Host Macros](https://github.com/sfuerte/zbx-mssql/blob/master/images/zbx_mssql-macros_config.png)
 
 
 ## Troubleshooting
