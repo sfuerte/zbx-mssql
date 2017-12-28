@@ -30,7 +30,7 @@ Most requests are done via Windows performance counters (`perf_counter`), some v
   - Log File size, utilization, flushes, growths, shrinks, etc.
 - 18 graphs
 - Version information
-- `{$NGINX_HOST}` and `{$NGINX_PORT}` macros for customization
+- `{$ODBC}`, `{$MSSQL_USER}` and `{$MSSQL_PASSWORD}` macros for customization
 - Tested on MS SQL 2008 & 2012. 
 
 
