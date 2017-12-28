@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.4</version>
+    <date>2017-12-28T20:47:10Z</date>
+    <value_maps>
+        <value_map>
+            <name>MS SQL Server database state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>ONLINE</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>RESTORING</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>RECOVERING</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>RECOVERY PENDING</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>SUSPECT</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>EMERGENCY</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>OFFLINE</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Database Does Not Exist on Server</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>
