@@ -40,25 +40,26 @@ For Debian 9 (stretch), install the following packages via:
  
 ### Zabbix Configuration
 
-1) Copy `userparameter_mssql.conf` to your Zabbix Agent folder, e.g. `C:\srv\ZabbixAgent\conf\conf.d`.
+- Copy `userparameter_mssql.conf` to your Zabbix Agent folder, e.g. `C:\srv\ZabbixAgent\conf\conf.d`.
 
-1) Copy PowerShell scripts (`mssql_*.ps1`) to the scripts folder, e.g. `C:\srv\ZabbixAgent\scripts` folder.
+- Copy PowerShell scripts (`mssql_*.ps1`) to the scripts folder, e.g. `C:\srv\ZabbixAgent\scripts` folder.
 IMPORTANT: if you use another folder for agent scripts, then update userparameter file in the previous step!
 
-1) Import XML template file (`zbx_template_mssql.xml`) into Zabbix via Web GUI (Configuration -> Templates -> Import).
+- Import XML template file (`zbx_template_mssql.xml`) into Zabbix via Web GUI (Configuration -> Templates -> Import).
 Optional, if you want to use ODBC for discovering databases, then update XML file before importing, as all item prototypes
 are under a discovery rule that utilizes PowerShell via Zabbix Agent.
 ![Discovery Rule](https://github.com/sfuerte/zbx-mssql/blob/master/images/zbx_mssql-discovery_rules.png)
 
-1) Configure regular expression in "Administration -> General -> Regular Expressions (dropdown on the right)":
+- Configure regular expression in "Administration -> General -> Regular Expressions (dropdown on the right)":
+
 ```
 Name: Databases for discovery
 Expression: ^(master|model|msdb|ReportServer|ReportServerTempDB|tempdb)$
 Type: Result is FALSE
 ```
-
 1) Import "MS SQL Server database state" value mapping (`zbx_valuemaps_mssql.xml`) in "Administration -> General -> Value mapping (dropdown on the right)". 
 Or add it manually:
+
 ```
  0 -> ONLINE
  1 -> RESTORING
@@ -70,21 +71,22 @@ Or add it manually:
  7 -> Database Does Not Exist on Server
 ```
 
-1) Assign the imported template to a host.
+- Assign the imported template to a host.
 
-1) Optional, if using ODBC, follow instructions below.
+- Optional, if using ODBC, follow instructions below.
 
-1) Restart Zabbix Agent and enjoy... or, actually, good luck in tuning MS SQL ;) 
+- Restart Zabbix Agent and enjoy... or, actually, good luck in tuning MS SQL ;) 
 
 
 ### ODBC Configuration
 
-1) In MS SQL, create a read-only user for accessing `master` DB, e.g. `zbx-maint`.
+- In MS SQL, create a read-only user for accessing `master` DB, e.g. `zbx-maint`.
 
-1) On Zabbix Server, install required packages:
+- On Zabbix Server, install required packages:
 `apt-get install odbcinst tdsodbc unixodbc`
 
-1) Create ODBC driver configuration file:
+- Create ODBC driver configuration file:
+
 ```
 sudo vi /etc/odbc.ini
 [srv01-mssql]
@@ -94,7 +96,8 @@ PORT = 1433
 TDS_Version = 8.0
 ```
 
-1) Update macros for the monitored host under "Configuration -> Hosts -> hostname -> Macros":
+- Update macros for the monitored host under "Configuration -> Hosts -> hostname -> Macros":
+
 ```
 {$MSSQL_PASSWORD} - <your generated pass>
 {$MSSQL_USER}	  - zbx-maint
