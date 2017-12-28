@@ -55,7 +55,7 @@ Name: Databases for discovery
 Expression: ^(master|model|msdb|ReportServer|ReportServerTempDB|tempdb)$
 Type: Result is FALSE
 ```
-1) Import "MS SQL Server database state" value mapping (`zbx_valuemaps_mssql.xml`) in "Administration -> General -> Value mapping (dropdown on the right)". 
+- Import "MS SQL Server database state" value mapping (`zbx_valuemaps_mssql.xml`) in "Administration -> General -> Value mapping (dropdown on the right)". 
 Or add it manually:
 
 ```
