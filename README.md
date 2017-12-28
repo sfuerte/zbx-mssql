@@ -9,9 +9,7 @@ Most requests are done via Windows performance counters (`perf_counter`), some v
 
 ## System requirements
 
-- Optional, ODBC driver installed and configured on Zabbix Server. 
-For Debian 9 (stretch), install the following packages via: 
-`apt-get install odbcinst tdsodbc unixodbc`
+- Optional, ODBC driver installed and configured on Zabbix Server (see below). 
 
 
 ## Features
@@ -82,7 +80,7 @@ Or add it manually:
 
 - In MS SQL, create a read-only user for accessing `master` DB, e.g. `zbx-maint`.
 
-- On Zabbix Server, install required packages:
+- On Zabbix Server, install required packages. The following works for Debian 8 (jessie) and 9 (stretch): 
 `apt-get install odbcinst tdsodbc unixodbc`
 
 - Create ODBC driver configuration file:
