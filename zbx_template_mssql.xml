@@ -4982,7 +4982,7 @@
             </graph_items>
         </graph>
         <graph>
-            <name>MS SQL: pf (Количество ошибок на страницах)</name>
+            <name>MS SQL: pf (Number of errors on pages)</name>
             <width>900</width>
             <height>200</height>
             <yaxismin>0.0000</yaxismin>
