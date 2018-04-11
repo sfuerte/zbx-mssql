@@ -51,7 +51,7 @@ are under a discovery rule that utilizes PowerShell via Zabbix Agent.
 - Configure regular expression in "Administration -> General -> Regular Expressions (dropdown on the right)":
 
 ```
-Name: Databases for discovery
+Name: MS SQL Databases for discovery
 Expression: ^(master|model|msdb|ReportServer|ReportServerTempDB|tempdb)$
 Type: Result is FALSE
 ```
