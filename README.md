@@ -1,5 +1,5 @@
 # update
-Updated to pull multiple instances on one server. Tested on MS SQL 2014 and MS SQL 2016.
+Updated to pull multiple instances on one server. Tested for Powershell only on MS SQL 2014 and MS SQL 2016.
 
 # zbx-mssql
 
