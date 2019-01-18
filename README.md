@@ -1,6 +1,10 @@
 # update
 Updated to pull multiple instances on one server. Tested for Powershell only on MS SQL 2014 and MS SQL 2016.
 
+# TODO
+-Add port number.
+-Test with MS SQL 2017 on Windows and Linux.
+
 # zbx-mssql
 
 Zabbix Template for monitoring and collecting Microsoft SQL Server statistics.
