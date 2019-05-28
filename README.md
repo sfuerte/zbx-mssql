@@ -1,5 +1,6 @@
-# update
-Updated to pull multiple instances on one server. Tested for Powershell only on MS SQL 2014 and MS SQL 2016.
+# Update - 2019-05-28
+Moved to another company with no Zabbix and/or MS Sql in its environment, hence archiving the repo.
+
 
 # TODO
 -Add port number.
@@ -23,6 +24,7 @@ Most requests are done via Windows performance counters (`perf_counter`), some v
 ## Features
 
 - State of MS SQL services
+- Multiple instances on one server
 - Global Server Statistics (70 items in total):
   - Memory
   - Cache
@@ -39,7 +41,7 @@ Most requests are done via Windows performance counters (`perf_counter`), some v
 - 18 graphs
 - Version information
 - `{$ODBC}`, `{$MSSQL_USER}` and `{$MSSQL_PASSWORD}` macros for customization
-- Tested on MS SQL 2008 & 2012. 
+- Tested on MS SQL 2008, 2012, 2014 & 2016.
 
 
 ## Installation
